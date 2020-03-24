@@ -51,11 +51,22 @@ namespace BVtranslateAV
             int r = translate(x);
             String re = r + "";
             AVtext.Text = re;
+            linkLabel2.Text = "https://www.bilibili.com/video/av" + r;
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://space.bilibili.com/40506842/video");
+        }
+
+        private void linkLabel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            System.Diagnostics.Process.Start(linkLabel2.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
